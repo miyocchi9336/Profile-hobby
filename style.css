@@ -1,0 +1,378 @@
+body {
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* 左メニュー */
+
+.left_container {
+  height: auto;
+  width: 280px;
+  background: linear-gradient(to bottom, #EBD6F9, #fff);
+}
+
+.header_logo {
+  text-align: center;
+  margin: 50px 0 40px;
+}
+
+.header_logo img {
+  width: 280px;
+  height: 108px;
+}
+
+.scene__img img {
+  width: 270px;
+  height: auto;
+  margin: 8px;
+}
+
+
+
+/* 右メニュー */
+
+.right_container {
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* トップの画像*/
+.top_visual {
+  height: 392px;
+  margin-bottom: 37px;
+  background-image: url(img/back.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  text-align: center;
+}
+
+.top_visual h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #E4017E;
+  text-shadow: 1px 2px 3px #808080;
+  padding: 60px 0 50px;
+}
+
+.top_visual p {
+  font-size: 20px;
+  color: #000;
+  text-shadow: 1px 2px 3px #808080;
+}
+
+/* メインの内容 */
+main {
+  display: flex;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+/* 左側 */
+.main_left {
+  width: 426px;
+}
+
+.section__h2 {
+  background: linear-gradient(to right, #50DFBD 60%, #fff) ;
+  width: 100%;
+  height: 44px;
+  padding: 5px 20px;
+  margin-left: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* 曲紹介 */
+article {
+  display: flex;
+  padding: 15px 0 25px 10px;
+  margin-bottom: 15px;
+}
+
+article:nth-child(odd) {
+  padding-top: 0;
+}
+
+.notice_left {
+  margin-right: 20px;
+}
+
+.notice_left img {
+  width: 97px;
+  height: auto;
+}
+
+.date {
+  font-size: 13px;
+  color: #787878;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 13px;
+}
+
+.notice_right a {
+  font-size: 12px;
+  background-color: #084C94;
+  color: #ffffff;
+  padding: 5px 10px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* ストーリー */
+.time_table {
+  padding: 15px 0 15px 20px;
+}
+
+.time_table p {
+  font-size: 16px;
+  color: #595959;
+  padding: 5px 0;
+  text-indent: .8em;
+}
+
+/* メンバー */
+.main_right {
+  width: 394px;
+  padding: 0 8px 0 10px;
+  margin-left: 10px;
+}
+
+.member {
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.member__card {
+  display: flex;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 1px 2px 3px #808080;
+}
+
+.member__img {
+  width: 30%;
+  height: auto;
+}
+
+.member__img img {
+  width: 100%;
+}
+
+.member__name {
+  padding: 23px 25px 0 25px;
+}
+
+.cv {
+  font-size: 18px;
+  text-align: right;
+}
+
+.kanon {
+  background-color: #FF7F27;
+  border: 1px solid #FF7F27;
+  border-radius: 0 30px 30px 0;
+}
+.keke {
+  background-color: #A0FFF9;
+  flex-direction: row-reverse;
+  border: 1px solid #A0FFF9;
+  border-radius: 30px 0 0 30px;
+}
+.sumire {
+  background-color: #74F465;
+  border: 1px solid #74F465;
+  border-radius: 0 30px 30px 0;
+}
+.chisato {
+  background-color: #FE6E90;
+  flex-direction: row-reverse;
+  border: 1px solid #FE6E90;
+  border-radius: 30px 0 0 30px;
+}
+.ren {
+  background-color: #00009F;
+  border: 1px solid #00009F;
+  border-radius: 0 30px 30px 0;
+}
+
+
+/* フッター */
+footer {
+  height: 540px;
+  background: #EBD6F9;
+  padding: 20px;
+}
+
+.footer__contents {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer__img img{
+  height: 55px;
+}
+
+.footer__img {
+  width: 30%;
+}
+
+.footer__text {
+  width: 70%;
+  font-size: 15px;
+}
+
+.sns {
+  display: flex;
+  height: 380px;
+  font-weight: bold;
+}
+
+.twitter {
+  width: 30%;
+  padding-right: 10px;
+}
+
+.twitter__title {
+  border-bottom: 1px solid #000;
+  margin-bottom: 15px;
+}
+
+.youtube {
+  width: 70%;
+}
+
+.youtube__title {
+  border-bottom: 1px solid #000;
+  margin-bottom: 15px;
+}
+
+
+/* レスポンシブ */
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+/* ヘッダー */
+
+  .left_container {
+    height: 127px;
+    width: 100%;
+    position: static;
+  }
+
+.header_logo {
+  margin: 15px auto 17px;
+}
+
+.header_logo img {
+  width: 270px;
+  height: 100px;
+}
+
+.scene {
+  display: none;
+}
+
+/* トップ画像 */
+.right_container {
+  width: 100%;
+  height: auto;
+}
+
+.top_visual {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.top_visual img {
+  width: 100%;
+  height: auto;
+}
+
+.top_visual p {
+  font-size: 16px;
+}
+
+/* メイン */
+
+main {
+  flex-direction: column;
+  height: auto;
+}
+
+/* 左側 */
+.main_left {
+  order: 1;
+  width: 100%;
+}
+
+section h2 {
+  width: 100%;
+}
+
+section h2 img {
+  max-width: 100%;
+}
+
+article {
+  padding: 15px 15px 0 15px;
+}
+
+/* メニュー */
+
+.main_right {
+  order: 2;
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+}
+
+/* フッター */
+footer {
+  height: 1000px;
+}
+
+.footer__contents {
+  flex-direction: column;
+}
+
+.footer__img, .footer__text {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sns {
+  flex-direction: column;
+}
+
+.twitter, .youtube {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+}
