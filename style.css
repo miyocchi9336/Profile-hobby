@@ -33,6 +33,32 @@ body {
   width: 270px;
   height: auto;
   margin: 8px;
+
+  transform: translateX(-150%);
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.story01 { animation-delay: .2s; }
+.story02 { animation-delay: .3s; }
+.story03 { animation-delay: .4s; }
+.story04 { animation-delay: .5s; }
+.story05 { animation-delay: .6s; }
+.story06 { animation-delay: .7s; }
+.story07 { animation-delay: .8s; }
+.story08 { animation-delay: .9s; }
+.story09 { animation-delay: 1s; }
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0%);
+  }
 }
 
 
@@ -93,7 +119,34 @@ main {
   color: #fff;
   font-weight: bold;
   font-size: 20px;
+  position: relative;
+  overflow: hidden;
 }
+
+@keyframes shiny {
+  0% { left: -20%; }
+  10% { left: 120%; }
+  100% { left: 120%; }
+}
+
+.section__h2::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  width: 40px;
+  height: 100%;
+  transform: scale(2) rotate(20deg);
+  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, .5) 100%, rgba(255, 255, 255, 0) 0%);
+
+  animation-name: shiny;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+
 
 /* 曲紹介 */
 article {
@@ -106,13 +159,18 @@ article:nth-child(odd) {
   padding-top: 0;
 }
 
-.notice_left {
+.music_left {
   margin-right: 20px;
 }
 
-.notice_left img {
+.music_left img {
   width: 97px;
   height: auto;
+}
+
+.music_left img:hover {
+  transform: scale(2.0, 2.0);
+  transition: 1s all;
 }
 
 .date {
@@ -129,7 +187,7 @@ h3 {
   font-size: 13px;
 }
 
-.notice_right a {
+.music_right a {
   font-size: 12px;
   background-color: #084C94;
   color: #ffffff;
@@ -169,6 +227,7 @@ h3 {
   font-weight: bold;
   margin-bottom: 20px;
   text-shadow: 1px 2px 3px #808080;
+  position: relative;
 }
 
 .member__img {
@@ -178,6 +237,19 @@ h3 {
 
 .member__img img {
   width: 100%;
+}
+
+.active {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+}
+
+.member__card:hover .active {
+  opacity: 1;
+  z-index: 10;
 }
 
 .member__name {
@@ -223,6 +295,16 @@ footer {
   height: 540px;
   background: #EBD6F9;
   padding: 20px;
+  animation: change-anime 20s linear infinite;
+}
+
+@keyframes change-anime {
+  0%, 100% {
+    background-color: #EBD6F9;
+  }
+  50% {
+    background-color: #f076e8;
+  }
 }
 
 .footer__contents {
@@ -267,6 +349,7 @@ footer {
   border-bottom: 1px solid #000;
   margin-bottom: 15px;
 }
+
 
 
 /* レスポンシブ */
@@ -343,13 +426,21 @@ article {
   padding: 15px 15px 0 15px;
 }
 
-/* メニュー */
+/* メンバー */
 
 .main_right {
   order: 2;
   width: 100%;
   margin-left: 0;
   padding: 0;
+}
+
+.active {
+  left: 0;
+}
+
+.active img {
+  width: 100%;
 }
 
 /* フッター */
